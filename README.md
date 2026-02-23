@@ -33,27 +33,45 @@ Modos soportados:
 - JavaScript (ES6)
 -  HTML5
 - CSS3
-
+---
 ## 🗂️ Estructura del proyecto
 
-proyecto-fin-grado/
-│
-├── index.html            # Escena principal XR
-├── index2.html           # Variante / pruebas XR
+```
+project/
+├── assets/
+│   ├── ground/                 → carpeta dedicada a recursos del suelo/terreno (texturas, mapas de altura, splatmaps, etc.)
+│   ├── image/                  → carpeta para imágenes 2D no relacionadas con texturas 3D (posiblemente UI, iconos, logos, fondos 2D, pantallazos…)
+│   ├── models/                 → carpeta con modelos 3D importables (.glb, .gltf, .fbx, .obj…)
+│   ├── sounds/                 → carpeta con archivos de sonido y música (mp3, wav, ogg…)
+│   ├── style/                  → carpeta con archivos de estilos (CSS, SCSS o similar para la interfaz HTML)
+│   └── textures/
+│       ├── mountain-texture.jpg   → textura principal para montañas
+│       └── waterbump.png          → mapa de normales/bump para simular agua con ondulaciones
 │
 ├── src/
-│   ├── scene/            # Configuración de escena 3D
-│   ├── camera/           # Control de cámara y XR
-│   ├── input/            # Controles de usuario
-│   ├── objects/          # Elementos 3D del simulador
-│   └── main.js           # Punto de entrada
+│   └── babylonjs/
+│       ├── controller/            → lógica de controles de usuario (teclado, ratón, gamepad, touch…)
+│       ├── initXRExperience/      → código específico para inicializar y gestionar modo WebXR (entrada/salida de sesión, manejo de controladores XR…)
+│       ├── model3D/
+│       │   ├── Aircraft/          → todo lo relacionado con la aeronave (modelo, animaciones, behaviours, sonidos asociados…)
+│       │   ├── Airport/           → modelo y lógica del aeropuerto (pista, terminal, hangares…)
+│       │   ├── Mountain/          → modelo y posiblemente colliders/zonas de la montaña
+│       │   ├── Ocean/             → lógica y/o geometría del océano (plano con shader de agua, reflejos…)
+│       │   └── Skybox/            → configuración del cielo (6 texturas, procedural, .env…)
+│       ├── physics/               → inicialización del motor de física, creación de cuerpos rígidos, colliders, gravedad, eventos de colisión…
+│       └── scene/                 → creación y configuración general de la escena Babylon (luces, sombras, cámara base, ground, sky, post-procesos…)
 │
-├── assets/
-│   ├── models/           # Modelos 3D
-│   ├── textures/         # Texturas
-│   └── ui/               # Recursos interfaz
+│   └── startBabylon.js            → archivo principal de entrada: crea el engine, canvas, escena inicial, arranca el render loop y carga lo demás
 │
-└── README.md
+├── Loading/
+│   ├── finish.js                  → lógica que se ejecuta cuando termina la carga (oculta loader, muestra menú o inicia experiencia)
+│   ├── loading.js                 → lógica de la pantalla de carga (barra de progreso, animaciones, precarga de assets…)
+│   └── (posiblemente otros archivos relacionados con estados de carga)
+│
+├── index.html                     → página HTML principal del proyecto
+└── index2.html                    → segunda página HTML (probable variante de prueba, debug, sin XR, mobile, etc.)
+```
+---
 # ■ Ejecución
 ## Opción 1 — Navegador (rápido)
 Abrir:
