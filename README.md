@@ -33,7 +33,7 @@ Modos soportados:
 - JavaScript (ES6)
 -  HTML5
 - CSS3
----
+
 ## 🗂️ Estructura del proyecto
 
 proyecto-fin-grado/
@@ -54,7 +54,6 @@ proyecto-fin-grado/
 │   └── ui/               # Recursos interfaz
 │
 └── README.md
----
 # ■ Ejecución
 ## Opción 1 — Navegador (rápido)
 Abrir:
