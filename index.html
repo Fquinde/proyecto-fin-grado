@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Simulador de Vuelo</title>
+    <!-- Babylon.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.2/dat.gui.min.js"></script>
+    <script src="https://assets.babylonjs.com/generated/Assets.js"></script>
+    <script src="https://cdn.babylonjs.com/v6.49.0/recast.js"></script>
+    <script src="https://cdn.babylonjs.com/v6.49.0/ammo.js"></script>
+    <script src="https://cdn.babylonjs.com/v6.49.0/havok/HavokPhysics_umd.js"></script>
+    <script src="https://cdn.babylonjs.com/v6.49.0/cannon.js"></script>
+    <script src="https://cdn.babylonjs.com/v6.49.0/Oimo.js"></script>
+    <script src="https://cdn.babylonjs.com/v6.49.0/earcut.min.js"></script>
+    <script src="https://cdn.babylonjs.com/v6.49.0/babylon.js"></script>
+    <script src="https://cdn.babylonjs.com/v6.49.0/materialsLibrary/babylonjs.materials.min.js"></script>
+    <script src="https://cdn.babylonjs.com/v6.49.0/proceduralTexturesLibrary/babylonjs.proceduralTextures.min.js"></script>
+    <script src="https://cdn.babylonjs.com/v6.49.0/postProcessesLibrary/babylonjs.postProcess.min.js"></script>
+    <script src="https://cdn.babylonjs.com/v6.49.0/loaders/babylonjs.loaders.js"></script>
+    <script src="https://cdn.babylonjs.com/v6.49.0/serializers/babylonjs.serializers.min.js"></script>
+    <script src="https://cdn.babylonjs.com/v6.49.0/gui/babylon.gui.min.js"></script>
+    <script src="https://cdn.babylonjs.com/v6.49.0/inspector/babylon.inspector.bundle.js"></script>
+    <script src="https://cdn.babylonjs.com/v6.49.0/materialsLibrary/babylon.waterMaterial.js"></script>
+    <!-- Script de PEP (Pointer Events Polyfill), normaliza y mejora el soporte de eventos táctiles en varios navegadores -->
+    <script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
+
+
+    <script type="module" src="./src/babylonjs/startBabylon.js"></script>
+    
+    <link rel="stylesheet" href="./assets/style/style.css">
+
+</head>
+
+<body>
+    <!--Importo el scrip de loading para que aparezca la pantalla de carga -->
+    <div id="loadingDiv">
+    </div>
+
+    <canvas id="renderCanvas" touch-action="none"></canvas>
+    <!-- touch-action="none" para obtener los mejores resultados de PEP -->
+    
+    <script src="./src/Loading/loading.js"></script>
+</body>
+
+</html>
