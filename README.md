@@ -34,25 +34,26 @@ Modos soportados:
 -  HTML5
 - CSS3
 ---
-# ■■ Estructura del proyecto
+## 🗂️ Estructura del proyecto
+
 proyecto-fin-grado/
-■
-■■■ index.html # Escena principal XR
-■■■ index2.html # Variante / pruebas XR
-■
-■■■ src/
-■ ■■■ scene/ # Configuración de escena 3D
-■ ■■■ camera/ # Control de cámara y XR
-■ ■■■ input/ # Controles de usuario
-■ ■■■ objects/ # Elementos 3D del simulador
-■ ■■■ main.js # Punto de entrada
-■
-■■■ assets/
-■ ■■■ models/ # Modelos 3D
-■ ■■■ textures/ # Texturas
-■ ■■■ ui/ # Recursos interfaz
-■
-■■■ README.md
+│
+├── index.html            # Escena principal XR
+├── index2.html           # Variante / pruebas XR
+│
+├── src/
+│   ├── scene/            # Configuración de escena 3D
+│   ├── camera/           # Control de cámara y XR
+│   ├── input/            # Controles de usuario
+│   ├── objects/          # Elementos 3D del simulador
+│   └── main.js           # Punto de entrada
+│
+├── assets/
+│   ├── models/           # Modelos 3D
+│   ├── textures/         # Texturas
+│   └── ui/               # Recursos interfaz
+│
+└── README.md
 ---
 # ■ Ejecución
 ## Opción 1 — Navegador (rápido)
